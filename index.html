@@ -1,0 +1,34 @@
+<html><head>
+<meta name="keywords" content="java, script, javascript, MD5, MD4, SHA, SHA-1, secure, hash, algorithm, digital, signature, password, protection">
+<meta name="description" content="Implementation of MD5 secure hash algorithm in JavaScript">
+<style><!-- a:hover{color:#0000FF} --></style>
+<title>AB JavaScript Hashing</title>
+</head>
+<body BGCOLOR="#FFFFFF" LINK="#000080" VLINK="#6060C0" TEXT="#000000">
+
+<center>
+<alt="JavaScript MD5" width=332 height=65></center><p>
+<p><table width=100% bgcolor="00AB00" cellpadding=1 cellspacing=0><tr><td><font size=+1 face=arial color=black><b>&nbsp;Introduction</b></font></td></tr></table><p>
+The MD4, MD5 and SHA-1 algorithms are all secure hash functions. They take a string as input, and produce a fixed size number - 128 bits for MD4 and MD5; 160 bits for SHA-1. This number is a hash of the input - a small change in the input results in a substantial change in the output number. The functions are thought to be secure in the sense that it requires an enormous amount of computing power and time to find a string which hashes to a chosen value. In others words, there's no way to decrypt a secure hash. The uses of secure hashes include digital signatures and challenge hash authentication. You can calculate the hash of any text below. 
+ <p>
+
+
+<p><table width=100% bgcolor="00AB00" cellpadding=1 cellspacing=0><tr><td><font size=+1 face=arial color=black><b>&nbsp;Calculate</b></font></td></tr></table><p>
+<script language="JavaScript" src="md4.js"></script>
+<script language="JavaScript" src="md5.js"></script>
+<script language="JavaScript" src="sha1.js"></script>
+<blockquote><form><table>
+<tr><td > <font color=blue size=+1>Input</font>  </td><td > <input type=text name=input size=60> </td></tr>
+<tr><td > <font color=blue size=+1>Calculate</font> 
+</td><td > <center><input type=button value=MD4 onclick="hash.value = calcMD4(input.value)"> 
+<input type=button value=MD5 onclick="hash.value = calcMD5(input.value)"> 
+<input type=button value=SHA-1 onclick="hash.value = calcSHA1(input.value)"> </center> </td></tr>
+<tr><td > <font color=blue size=+1>Result</font> </td><td > <input type=text name=hash size=60> </td></tr>
+</table></form>
+<p><code>
+calcMD4("Hello, World!") = "94e3cb0fa9aa7a5ee3db74b79e915989"<br>
+calcMD5("Hello, World!") = "65a8e27d8879283831b664bd8b7f0ad4"<br>
+calcSHA1("Hello, World!") = "0a0a9f2a6772942557ab5355d76af442f8f65e01"<br>
+</code></blockquote>
+
+</body></html>
